@@ -1,5 +1,5 @@
 // 
-//  ProductDetailController.swift
+//  ProductCell.swift
 //
 //  Created by harald bregu on 02/03/23.
 //  Copyright © 2019 MEGAGENERAL. All rights reserved.
@@ -25,45 +25,45 @@
 
 import UIKit
 
-class ProductDetailController: UIViewController {
+
+class ProductCell: UITableViewCell {
+    @IBOutlet weak var containerCardView: UIView!
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var firstBrewedLabel: UILabel!
-    @IBOutlet weak var foodPairingLabel: UILabel!
-    @IBOutlet weak var brewersTipsLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var alcolicRateLabel: UILabel!
+    @IBOutlet weak var ibuLabel: UILabel!
     
-    var beer: Beer!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        title = beer.name
-        navigationItem.title = title
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
-        firstBrewedLabel.text = beer.firstBrewed
-        firstBrewedLabel.isHidden = beer.firstBrewed.count == 0
-        foodPairingLabel.text = "• " + beer.foodPairing.joined(separator: "\n• ")
-        foodPairingLabel.isHidden = beer.foodPairing.count == 0
-        brewersTipsLabel.text = beer.brewersTips
-        brewersTipsLabel.isHidden = beer.brewersTips.count == 0
+        containerCardView.layer.cornerRadius = 9
+        containerCardView.layer.masksToBounds = true
+    }
+    
+    func configure(with viewModel: ProductViewModel, indexPath: IndexPath) {
+        
+        let beer = viewModel.beers[indexPath.row]
+        
+        nameLabel.text = beer.name
+        descriptionLabel.text = beer.description
+        alcolicRateLabel.text = "Alcolic rate: " + (beer.abv?.string ?? "N/A")
+        ibuLabel.text = "IBU: " + (beer.ibu?.string ?? "N/A")
         
         productImageView.image = UIImage()
+        
         if let url = URL(string: beer.imageUrl) {
             getData(from: url) { data, response, error in
                 guard let data = data, error == nil else { return }
-                print("Download Finished")
-                // always update the UI from the main thread
-                
-                DispatchQueue.main.async() { [unowned self] in
-                    self.productImageView.image = UIImage(data: data)
+                DispatchQueue.main.async() { [weak self] in
+                    self?.productImageView.image = UIImage(data: data)
                 }
             }
         }
-        
-
     }
- 
-    private func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
-
+    
 }

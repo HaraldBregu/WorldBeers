@@ -6,5 +6,6 @@ target 'WorldBeers' do
   use_frameworks!
 
   # Pods for WorldBeers
-
+  pod 'MBProgressHUD'
+  
 end

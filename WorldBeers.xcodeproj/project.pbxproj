@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D623A3D9DC9A76FB73F7069 /* Pods_WorldBeers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6524B56EAD75BA520BCA9F6A /* Pods_WorldBeers.framework */; };
+		87892AD36FCEAAC5E6511DEA /* Pods_WorldBeers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215DF76D5777C8FEFEDEC973 /* Pods_WorldBeers.framework */; };
 		A964A6D729B09DBE00FA3BFC /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964A6D629B09DBE00FA3BFC /* ProductCell.swift */; };
-		A964A6D929B09E1800FA3BFC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964A6D829B09E1800FA3BFC /* NetworkManager.swift */; };
-		A964A6DE29B0A0A400FA3BFC /* BeerNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A964A6DD29B0A0A400FA3BFC /* BeerNetwork.swift */; };
+		A9910F0429B161F500F7F048 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9910F0329B161F500F7F048 /* ProductViewModel.swift */; };
+		A9910F0729B1646700F7F048 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9910F0629B1646700F7F048 /* Extensions.swift */; };
 		A99AED8929AFE4520053C090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AED8829AFE4520053C090 /* AppDelegate.swift */; };
 		A99AED8B29AFE4520053C090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AED8A29AFE4520053C090 /* SceneDelegate.swift */; };
 		A99AED8D29AFE4520053C090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AED8C29AFE4520053C090 /* ViewController.swift */; };
@@ -18,7 +18,6 @@
 		A99AED9229AFE4550053C090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99AED9129AFE4550053C090 /* Assets.xcassets */; };
 		A99AED9529AFE4560053C090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99AED9329AFE4560053C090 /* LaunchScreen.storyboard */; };
 		A99AED9E29AFEAC30053C090 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A99AEDA029AFEAC30053C090 /* Localizable.strings */; };
-		A9C0376729B08FBB0003B15E /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = A9C0376629B08FBB0003B15E /* test.json */; };
 		A9E3E1CE29B0CE4F008AEBE9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3E1CD29B0CE4F008AEBE9 /* NetworkService.swift */; };
 		A9E3E1D029B0D061008AEBE9 /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3E1CF29B0D061008AEBE9 /* BeerService.swift */; };
 		A9E3E1D229B0E0C7008AEBE9 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3E1D129B0E0C7008AEBE9 /* Beer.swift */; };
@@ -26,10 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6524B56EAD75BA520BCA9F6A /* Pods_WorldBeers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldBeers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		215DF76D5777C8FEFEDEC973 /* Pods_WorldBeers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldBeers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A964A6D629B09DBE00FA3BFC /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		A964A6D829B09E1800FA3BFC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		A964A6DD29B0A0A400FA3BFC /* BeerNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerNetwork.swift; sourceTree = "<group>"; };
+		A9910F0329B161F500F7F048 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		A9910F0629B1646700F7F048 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A99AED8529AFE4520053C090 /* WorldBeers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldBeers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99AED8829AFE4520053C090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A99AED8A29AFE4520053C090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,13 +38,12 @@
 		A99AED9429AFE4560053C090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99AED9629AFE4560053C090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A99AED9F29AFEAC30053C090 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A9C0376629B08FBB0003B15E /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		A9E3E1CD29B0CE4F008AEBE9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A9E3E1CF29B0D061008AEBE9 /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		A9E3E1D129B0E0C7008AEBE9 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		A9E3E1D329B0E26B008AEBE9 /* ProductDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
-		AF91F6E956B750C32EA7AF89 /* Pods-WorldBeers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldBeers.debug.xcconfig"; path = "Target Support Files/Pods-WorldBeers/Pods-WorldBeers.debug.xcconfig"; sourceTree = "<group>"; };
-		B94DFF730D5EC23F0428A86A /* Pods-WorldBeers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldBeers.release.xcconfig"; path = "Target Support Files/Pods-WorldBeers/Pods-WorldBeers.release.xcconfig"; sourceTree = "<group>"; };
+		CFD1ACE6221E7A18A9F14009 /* Pods-WorldBeers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldBeers.debug.xcconfig"; path = "Target Support Files/Pods-WorldBeers/Pods-WorldBeers.debug.xcconfig"; sourceTree = "<group>"; };
+		DB636326D09126E44E54706D /* Pods-WorldBeers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldBeers.release.xcconfig"; path = "Target Support Files/Pods-WorldBeers/Pods-WorldBeers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D623A3D9DC9A76FB73F7069 /* Pods_WorldBeers.framework in Frameworks */,
+				87892AD36FCEAAC5E6511DEA /* Pods_WorldBeers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,29 +61,51 @@
 		6F36E4355A8053A891958FF2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF91F6E956B750C32EA7AF89 /* Pods-WorldBeers.debug.xcconfig */,
-				B94DFF730D5EC23F0428A86A /* Pods-WorldBeers.release.xcconfig */,
+				CFD1ACE6221E7A18A9F14009 /* Pods-WorldBeers.debug.xcconfig */,
+				DB636326D09126E44E54706D /* Pods-WorldBeers.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A9272D2B29B0104B005E37A2 /* Model */ = {
+		9022684EF356118C8CBAFD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A964A6D829B09E1800FA3BFC /* NetworkManager.swift */,
-				A964A6DD29B0A0A400FA3BFC /* BeerNetwork.swift */,
+				215DF76D5777C8FEFEDEC973 /* Pods_WorldBeers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9272D2B29B0104B005E37A2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				A9E3E1CD29B0CE4F008AEBE9 /* NetworkService.swift */,
 				A9E3E1CF29B0D061008AEBE9 /* BeerService.swift */,
 			);
-			path = Model;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		A999A4B7B256F2CD06DC7EC9 /* Frameworks */ = {
+		A9910F0129B15AF200F7F048 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6524B56EAD75BA520BCA9F6A /* Pods_WorldBeers.framework */,
+				A9910F0329B161F500F7F048 /* ProductViewModel.swift */,
 			);
-			name = Frameworks;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A9910F0229B15B1600F7F048 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A964A6D629B09DBE00FA3BFC /* ProductCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9910F0529B1644E00F7F048 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A9910F0629B1646700F7F048 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		A99AED7C29AFE4510053C090 = {
@@ -94,7 +114,7 @@
 				A99AED8729AFE4520053C090 /* WorldBeers */,
 				A99AED8629AFE4520053C090 /* Products */,
 				6F36E4355A8053A891958FF2 /* Pods */,
-				A999A4B7B256F2CD06DC7EC9 /* Frameworks */,
+				9022684EF356118C8CBAFD91 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,14 +129,15 @@
 		A99AED8729AFE4520053C090 /* WorldBeers */ = {
 			isa = PBXGroup;
 			children = (
-				A9272D2B29B0104B005E37A2 /* Model */,
-				A99AEDA129AFF0A40053C090 /* Networking */,
 				A99AED8829AFE4520053C090 /* AppDelegate.swift */,
 				A99AED8A29AFE4520053C090 /* SceneDelegate.swift */,
+				A9910F0529B1644E00F7F048 /* Utils */,
+				A9272D2B29B0104B005E37A2 /* Network */,
+				A99AEDA129AFF0A40053C090 /* Model */,
+				A9910F0229B15B1600F7F048 /* View */,
+				A9910F0129B15AF200F7F048 /* ViewModel */,
 				A99AED8C29AFE4520053C090 /* ViewController.swift */,
 				A9E3E1D329B0E26B008AEBE9 /* ProductDetailController.swift */,
-				A964A6D629B09DBE00FA3BFC /* ProductCell.swift */,
-				A9C0376629B08FBB0003B15E /* test.json */,
 				A99AED8E29AFE4520053C090 /* Main.storyboard */,
 				A99AED9129AFE4550053C090 /* Assets.xcassets */,
 				A99AED9329AFE4560053C090 /* LaunchScreen.storyboard */,
@@ -126,12 +147,12 @@
 			path = WorldBeers;
 			sourceTree = "<group>";
 		};
-		A99AEDA129AFF0A40053C090 /* Networking */ = {
+		A99AEDA129AFF0A40053C090 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A9E3E1D129B0E0C7008AEBE9 /* Beer.swift */,
 			);
-			path = Networking;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A99AED9929AFE4560053C090 /* Build configuration list for PBXNativeTarget "WorldBeers" */;
 			buildPhases = (
-				B90FD6F855040CCCB29413BA /* [CP] Check Pods Manifest.lock */,
+				E0DF66D4F0904A9BFC51AD01 /* [CP] Check Pods Manifest.lock */,
 				A99AED8129AFE4520053C090 /* Sources */,
 				A99AED8229AFE4520053C090 /* Frameworks */,
 				A99AED8329AFE4520053C090 /* Resources */,
+				2F9B63273FFA0DC981F08C63 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,7 +217,6 @@
 			files = (
 				A99AED9529AFE4560053C090 /* LaunchScreen.storyboard in Resources */,
 				A99AED9E29AFEAC30053C090 /* Localizable.strings in Resources */,
-				A9C0376729B08FBB0003B15E /* test.json in Resources */,
 				A99AED9229AFE4550053C090 /* Assets.xcassets in Resources */,
 				A99AED9029AFE4520053C090 /* Main.storyboard in Resources */,
 			);
@@ -204,7 +225,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B90FD6F855040CCCB29413BA /* [CP] Check Pods Manifest.lock */ = {
+		2F9B63273FFA0DC981F08C63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldBeers/Pods-WorldBeers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldBeers/Pods-WorldBeers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldBeers/Pods-WorldBeers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0DF66D4F0904A9BFC51AD01 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,9 +274,9 @@
 				A99AED8D29AFE4520053C090 /* ViewController.swift in Sources */,
 				A9E3E1D229B0E0C7008AEBE9 /* Beer.swift in Sources */,
 				A964A6D729B09DBE00FA3BFC /* ProductCell.swift in Sources */,
-				A964A6DE29B0A0A400FA3BFC /* BeerNetwork.swift in Sources */,
+				A9910F0429B161F500F7F048 /* ProductViewModel.swift in Sources */,
 				A9E3E1D029B0D061008AEBE9 /* BeerService.swift in Sources */,
-				A964A6D929B09E1800FA3BFC /* NetworkManager.swift in Sources */,
+				A9910F0729B1646700F7F048 /* Extensions.swift in Sources */,
 				A99AED8929AFE4520053C090 /* AppDelegate.swift in Sources */,
 				A99AED8B29AFE4520053C090 /* SceneDelegate.swift in Sources */,
 				A9E3E1D429B0E26B008AEBE9 /* ProductDetailController.swift in Sources */,
@@ -392,7 +430,7 @@
 		};
 		A99AED9A29AFE4560053C090 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF91F6E956B750C32EA7AF89 /* Pods-WorldBeers.debug.xcconfig */;
+			baseConfigurationReference = CFD1ACE6221E7A18A9F14009 /* Pods-WorldBeers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +458,7 @@
 		};
 		A99AED9B29AFE4560053C090 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B94DFF730D5EC23F0428A86A /* Pods-WorldBeers.release.xcconfig */;
+			baseConfigurationReference = DB636326D09126E44E54706D /* Pods-WorldBeers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

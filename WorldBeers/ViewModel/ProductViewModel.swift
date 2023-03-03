@@ -1,7 +1,7 @@
 // 
-//  Beer.swift
+//  ProductViewModel.swift
 //
-//  Created by harald bregu on 02/03/23.
+//  Created by harald bregu on 03/03/23.
 //  Copyright © 2019 MEGAGENERAL. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,26 +23,30 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
+import UIKit
 
+class ProductViewModel {
+    private var tmpBeers: [Beer]!
+    var beers: [Beer] = []
 
-protocol Drinkable: Decodable {
-    var name: String { get set }
+    init() {
+        
+    }
     
-    /*
-    var image_url: String { get set }
-    var description: String { get set }
-    var first_brewed: String { get set }
-    var food_pairing: String { get set }
-    var brewers_tips: String { get set }
-    */
-}
-
-struct Beer: Drinkable {
-    var name: String
-    //var image_url: String
-    //var description: String
-    //var first_brewed: String
-    //var food_pairing: String
-    //var brewers_tips: String
+    func saveBeers(beers: [Beer]) {
+        self.beers += beers
+        self.tmpBeers = self.beers
+    }
+    
+    func filterBeers(text: String?) {
+        guard let text = text, text.count > 0 else {
+            beers = tmpBeers
+            return
+        }
+        
+        beers = tmpBeers.filter {
+            $0.name.range(of: text, options: [.caseInsensitive]) != nil ||
+            $0.description.range(of: text, options: [.caseInsensitive]) != nil
+        }
+    }
 }

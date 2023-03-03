@@ -1,7 +1,7 @@
 // 
-//  ProductCell.swift
+//  Extensions.swift
 //
-//  Created by harald bregu on 02/03/23.
+//  Created by harald bregu on 03/03/23.
 //  Copyright © 2019 MEGAGENERAL. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,14 +25,25 @@
 
 import UIKit
 
-class ProductCell: UITableViewCell {
+extension LosslessStringConvertible {
+    var string: String { .init(self) }
+}
+
+/*
+func Label(_ k:String, comment: String = "") -> String {
+    return UIView.remoteOrLocalLabel(forKey: k, comment: comment)
+}
+return NSLocalizedString(forKey, comment: comment)
+*/
+
+extension String {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    func localized(comment: String = "") -> Self {
+        return NSLocalizedString(self, comment: comment)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func localized() -> Self {
+        return localized(comment: "")
     }
     
 }
