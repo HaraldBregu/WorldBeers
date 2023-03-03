@@ -12,5 +12,22 @@ pod install
 ```
 
 ## How to extend features
+
 The app is structured in a way to be scaled vertically. 
 Each model created should be conform to Drink protocol:
+
+```swift
+
+protocol Drink: Codable {}
+
+struct Beer: Drink {}
+
+```
+
+You can use NetworkService to make http requests or create a custom class conformed to Networking protocol:
+
+```swift
+
+class BeerService: Networking
+
+```
