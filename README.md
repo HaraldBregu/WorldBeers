@@ -31,3 +31,5 @@ You can use NetworkService to make http requests or create a custom class confor
 class BeerService: Networking
 
 ```
+
+Use the same UI Layout for every type of drink without changing anything in the code.
