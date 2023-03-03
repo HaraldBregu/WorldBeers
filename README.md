@@ -1,8 +1,8 @@
-# World Beers
+# WorldBeers
 
 WorldBeers, a multinational beer industry, is the client of the app, and there are plans to augment the app with additional features and release it in multiple countries.
 
-
+<img src="https://raw.githubusercontent.com/HaraldBregu/WorldBeers/master/icon.png?token=GHSAT0AAAAAAB7NRNOHAWIF2TH5RWGGAMKYZACOS5A"  width="300" height="300">
 
 ## How to start
 To start developing this app you need CocoaPods installed and than run:
