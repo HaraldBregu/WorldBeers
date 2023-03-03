@@ -24,6 +24,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 
 class ProductCell: UITableViewCell {
@@ -41,29 +42,16 @@ class ProductCell: UITableViewCell {
         containerCardView.layer.masksToBounds = true
     }
     
-    func configure(with viewModel: ProductViewModel, indexPath: IndexPath) {
+    func configure(with viewModel: ProductViewModel, indexPath: IndexPath) -> Self {
+        let drink = viewModel.drinks[indexPath.row]
         
-        let beer = viewModel.beers[indexPath.row]
+        nameLabel.text = drink.name
+        descriptionLabel.text = drink.description
+        alcolicRateLabel.text = "Alcolic rate".localized() + ": " + (drink.abv?.string ?? "N/A")
+        ibuLabel.text = "IBU".localized() + ": " + (drink.ibu?.string ?? "N/A")
+        guard let url = URL(string: drink.imageUrl) else { return self }
+        productImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder_img"), context: nil)
         
-        nameLabel.text = beer.name
-        descriptionLabel.text = beer.description
-        alcolicRateLabel.text = "Alcolic rate: " + (beer.abv?.string ?? "N/A")
-        ibuLabel.text = "IBU: " + (beer.ibu?.string ?? "N/A")
-        
-        productImageView.image = UIImage()
-        
-        if let url = URL(string: beer.imageUrl) {
-            getData(from: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async() { [weak self] in
-                    self?.productImageView.image = UIImage(data: data)
-                }
-            }
-        }
+        return self
     }
-    
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
-    
 }

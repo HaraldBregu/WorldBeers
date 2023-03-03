@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  WorldBeers
+
+  Created by harald bregu on 01/03/23.
+  
+*/
+
+"WorldBeers" = "WorldBeers";
+"Search a product" = "Cerca un prodotto";
+"Alcolic rate" = "Grado alcolico";
+"IBU" = "IBU";
+"Fetching products" = "Recupero dei prodotti";
+"First Brewed" = "Prima prodotto";
+"Food Pairing" = "Abbinamento cibo";
+"Brewers Tips" = "Suggerimenti del birraio";

@@ -26,19 +26,7 @@
 import Foundation
 
 
-protocol Drinkable: Codable {
-    var id: Int { get set }
-    var name: String { get set }
-    var imageUrl: String { get set }
-    var description: String { get set }
-    var abv: Double? { get set }
-    var ibu: Double? { get set }
-    var firstBrewed: String { get set }
-    var foodPairing: [String] { get set }
-    var brewersTips: String { get set }
-}
-
-struct Beer: Drinkable {
+struct Beer: Drink {
     var id: Int
     var name: String
     var imageUrl: String
@@ -49,14 +37,8 @@ struct Beer: Drinkable {
     var foodPairing: [String]
     var brewersTips: String
     
-    
     enum CodingKeys: String, CodingKey {
-        case id, name,
-             imageUrl = "image_url",
-             description, abv, ibu,
-             firstBrewed = "first_brewed",
-             foodPairing = "food_pairing",
-             brewersTips = "brewers_tips"
+        case id, name, imageUrl, description, abv, ibu, firstBrewed, foodPairing, brewersTips
     }
     
     init(from decoder: Decoder) throws {

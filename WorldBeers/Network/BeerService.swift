@@ -28,17 +28,14 @@ import Foundation
 
 typealias ResponseBeerClosure = (Result<[Beer], NetworkError>) -> Void
 
-class BeerService: NetworkingMethods {
+class BeerService: Networking {
     static let shared = BeerService()
     
     var networkService: NetworkService?
-    
-    private init() {
-        
-    }
-    
     var completed: ResponseBeerClosure?
-    
+
+    private init() {}
+        
     func get(path: String, query: [String: String] = [:]) {
         
         guard let service = networkService else {
@@ -53,7 +50,7 @@ class BeerService: NetworkingMethods {
             case .success(let data):
                 do {
                     let decoder = JSONDecoder()
-                    //decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let objects = try decoder.decode([Beer].self, from: data)
                     self.completed?(.success(objects))
                 } catch {
@@ -65,5 +62,33 @@ class BeerService: NetworkingMethods {
                 break
             }
         }
+    }
+    
+    func post(path: String, body: [String : String]) {
+        
+    }
+    
+    func put(path: String, body: [String : String]) {
+        
+    }
+    
+    func delete(path: String, body: [String : String]) {
+        
+    }
+}
+
+extension BeerService {
+    
+    func get(page: Int, perPage: Int = 5) -> Self {
+        networkService = NetworkService.shared
+        networkService?.scheme = .HTTPS
+        networkService?.host = "api.punkapi.com"
+                
+        get(path: "/v2/beers", query: [
+            "page": String(page),
+            "per_page" : String(perPage)
+        ])
+        
+        return self
     }
 }

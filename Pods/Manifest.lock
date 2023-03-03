@@ -1,16 +1,22 @@
 PODS:
   - MBProgressHUD (1.2.0)
+  - SDWebImage (5.15.4):
+    - SDWebImage/Core (= 5.15.4)
+  - SDWebImage/Core (5.15.4)
 
 DEPENDENCIES:
   - MBProgressHUD
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - MBProgressHUD
+    - SDWebImage
 
 SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SDWebImage: 1c39de67663e5eebb2f41324d5d580eeea12dd4c
 
-PODFILE CHECKSUM: 3a58d629bde07b6913d684cd52ec1f7792501efb
+PODFILE CHECKSUM: 1551098a4f3eb1bb37d05a5b4c60dd100841ce56
 
 COCOAPODS: 1.12.0

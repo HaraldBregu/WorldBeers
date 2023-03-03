@@ -6,10 +6,11 @@
   
 */
 
-
-"slumber" = "Slumber";
-"white.noise" = "White Noise";
-"soothing" = "Soothing";
-"paino" = "Piano";
-"wind" = "Wind";
-"cold.fusion" = "Cold Fusion";
+"WorldBeers" = "WorldBeers";
+"Search a product" = "Search a product";
+"Alcolic rate" = "Alcolic rate";
+"IBU" = "IBU";
+"Fetching products" = "Fetching products";
+"First Brewed" = "First Brewed";
+"Food Pairing" = "Food Pairing";
+"Brewers Tips" = "Brewers Tips";

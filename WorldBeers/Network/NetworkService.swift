@@ -26,39 +26,15 @@
 import Foundation
 
 
-enum NetworkScheme: String {
-    case HTTPS = "https"
-}
-
-enum NetworkMethod: String {
-    case GET = "GET"
-    case POST = "POST"
-    case PUT = "PUT"
-    case DELETE = "DELETE"
-}
-
-typealias ResponseClosure = (Result<Data, NetworkError>) -> Void
-
-protocol NetworkingMethods {
-    func get(path: String, query: [String: String])
-}
-
-enum NetworkError: Error {
-    case invalidUrl
-    case unableToComplete
-    case invalidResponse
-    case invalidData
-}
-
-class NetworkService: NetworkingMethods {
+class NetworkService: Networking {
     static let shared = NetworkService()
-    
-    private init() {}
-    
+   
     var scheme: NetworkScheme = .HTTPS
     var host: String?
     var completed: ResponseClosure?
     
+    private init() {}
+
     func get(path: String, query: [String : String] = [:]) {
         
         guard let host = host, !host.isEmpty else {
@@ -100,6 +76,17 @@ class NetworkService: NetworkingMethods {
             self.completed?(.success(data))
             
         }.resume()
+    }
+    
+    func post(path: String, body: [String : String]) {
+        
+    }
+    
+    func put(path: String, body: [String : String]) {
+        
+    }
+    
+    func delete(path: String, body: [String : String]) {
         
     }
 }

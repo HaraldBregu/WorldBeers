@@ -26,25 +26,23 @@
 import UIKit
 
 class ProductViewModel {
-    private var tmpBeers: [Beer]!
-    var beers: [Beer] = []
+    private var tmpDrinks: [Drink]!
+    var drinks: [Drink] = []
 
-    init() {
-        
+    init() {}
+    
+    func saveDrinks(_ drinks: [Drink]) {
+        self.drinks += drinks
+        self.tmpDrinks = self.drinks
     }
     
-    func saveBeers(beers: [Beer]) {
-        self.beers += beers
-        self.tmpBeers = self.beers
-    }
-    
-    func filterBeers(text: String?) {
+    func filterDrinks(text: String?) {
         guard let text = text, text.count > 0 else {
-            beers = tmpBeers
+            drinks = tmpDrinks
             return
         }
         
-        beers = tmpBeers.filter {
+        drinks = tmpDrinks.filter {
             $0.name.range(of: text, options: [.caseInsensitive]) != nil ||
             $0.description.range(of: text, options: [.caseInsensitive]) != nil
         }
