@@ -13,8 +13,7 @@ pod install
 
 ## How to extend features
 
-The app is structured in a way to be scaled vertically. 
-Each model created should be conform to Drink protocol:
+The app is structured in a way to be scaled vertically. Each model created should be conformed to Drink protocol:
 
 ```swift
 
